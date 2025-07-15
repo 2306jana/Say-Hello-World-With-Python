@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    N = int(input())
+    the_list = []
+    for _ in range(N):
+        cmd = map(str, input().split())
+        cmd_list = list(cmd)
+        if cmd_list[0] == 'insert':
+            the_list.insert(int(cmd_list[1]), int(cmd_list[2]))
+        elif cmd_list[0] == 'print':
+            print(the_list)
+        elif cmd_list[0] == 'remove':
+            the_list.remove(int(cmd_list[1]))
+        elif cmd_list[0] == 'append':
+            the_list.append(int(cmd_list[1]))
+        elif cmd_list[0] == 'sort':
+            the_list.sort()
+        elif cmd_list[0] == 'pop':
+            the_list.pop()
+        elif cmd_list[0] == 'reverse':
+            the_list.reverse()
+         
