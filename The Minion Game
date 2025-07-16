@@ -1,0 +1,18 @@
+def minion_game(string):
+    n = len(string)
+    total = ((n)*(n+1))/2
+    k = 0
+    st = 0
+    k = sum([len(string[i:]) for i in range(len(string)) if string[i] in "AEIOU"])
+    st = total - k
+    if st == k:
+        print("Draw")
+    elif st > k:
+        print("Stuart", int(st) )
+    else:
+        print("Kevin", int(k))
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
