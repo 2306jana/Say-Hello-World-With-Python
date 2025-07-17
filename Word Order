@@ -1,0 +1,6 @@
+from collections import Counter
+n = int(input())
+word = [input().strip() for _ in range(n)]
+count = Counter(word)
+print(len(count))
+print(*count.values())
