@@ -1,0 +1,14 @@
+from collections import defaultdict
+d = defaultdict(list)
+x,y = (map(int, input().split()))
+
+for i in range(x):
+    gp1 = input()
+    d[gp1].append(i+1)
+
+for j in range(y):
+    gp2 = input()
+    if gp2 in d:
+        print(*d[gp2])
+    else:
+        print(-1)
